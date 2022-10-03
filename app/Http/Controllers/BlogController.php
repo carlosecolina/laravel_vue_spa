@@ -15,8 +15,6 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::all(['id','titulo','contenido']);
-        
-        
         return response()->json($blogs);
     }
 

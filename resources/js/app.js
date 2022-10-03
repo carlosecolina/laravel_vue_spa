@@ -1,28 +1,26 @@
 require('./bootstrap');
-
-import vue from 'vue';
+import vue from 'vue'
 window.Vue = vue;
 
 import App from './components/App.vue';
 
-//importamos axios 
+//importamos Axios
 import VueAxios from 'vue-axios';
 import axios from 'axios';
 
-//importamos y configuramos el Vue-router 
+//Importamos y configuramos el Vue-router
 import VueRouter from 'vue-router';
 import {routes} from './routes';
-import Vue from 'vue';
-
+ 
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
-
+ 
 const router = new VueRouter({
     mode: 'history',
     routes: routes
 });
-
-// Finallu define our app in Vue 
+ 
+//finalmente, definimos nuestra app de Vue
 const app = new Vue({
     el: '#app',
     router: router,
